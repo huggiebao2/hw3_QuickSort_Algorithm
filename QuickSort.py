@@ -21,12 +21,14 @@ def quick_sort(arr:list, first_index:int, last_index:int) -> None:
                 temp = arr[left]            # temp 拿來做兩者互換的暫時變數
                 arr[left] = arr[right]
                 arr[right] = temp
+                print(arr)
         
         # 基準點和右指標交換
         temp = arr[pivot]                   # temp 拿來做兩者互換的暫時變數
         arr[pivot] = arr[right]
         arr[right] = temp
         print(arr)
+        
 
         # 切成左右兩塊再跑一次
         quick_sort(arr, first_index, right - 1)
